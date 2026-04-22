@@ -16,6 +16,9 @@ the proposal gets accepted and are already signed up and rearing to
 go? Briefly describe all participants and the skills they will bring
 to the project.
 -->
+**Mackson Ncube** (Principal Investigator)
+As a professional statistician and data scientist, Mackson is the founder of mightymetrika, a think tank dedicated to developing statistical tools for small sample size research. The mightymetrika also specializes in developing citizen science applications to crowd source the investigation of statistical methods.  He is the original developer of the `mmints` R package and has a consistent track record of building open-source R tools (such as `npboottprm`, `scdtb`, `mmcards`, and `OLStrajr`) to advance statistical methodology. He views open-source development as a primary vehicle for building community, sharing expertise, and advancing scientific capability.
+* Profiles: [ResearchGate](https://www.researchgate.net/profile/Mackson-Ncube) | [UpWork](https://www.upwork.com/freelancers/~01c5a59d1725d12a0a?viewMode=1)
 
 ## Contributors
 <!--
