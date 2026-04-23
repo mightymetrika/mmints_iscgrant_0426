@@ -1,10 +1,9 @@
 ---
-title: "Proposal Title"
+title: "Evolving mmints from Citizen Science to Cyborg Science"
 author:
-  - name: Annie Easley
-    orcid: 5555-5555-5555-5555
+  - name: Mackson Ncube
     affiliations:
-      - "Lewis Research Center, National Aeronautics and Space Administration"
+      - Mightymetrika, LLC
 
 date: today
 date-format: iso
