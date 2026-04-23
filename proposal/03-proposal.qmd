@@ -3,39 +3,38 @@
 ## Overview
 We propose updating the `mmints` R package to provide specialized Shiny modules that transform web-based statistical citizen science applications into "cyborg science" environments. By integrating Large Language Models (LLMs) directly into the simulation pipeline, we will bridge the gap between lightweight parameter exploration and research-grade REPLEXT execution.
 
-This project will deliver two primary Shiny modules:
-1. **Intelligent Parameter Exploration (LLM Credit Donation):** A module allowing users to donate API credits so an LLM can act as an automated explorer.
-2. **AI Reporting & Code Generation:** A conversational module where the AI synthesizes database results based on user prompts and outputs a downloadable report containing executable R code for server-side REPLEXTs.
-
-Supporting tasks will include building lightweight infrastructure for user contribution tracking, safety tools, and database interaction efficiency optimizations. 
-
-## Detail
-
-### Proof of Concept and Existing Infrastructure
-This project does not start from scratch; it builds upon a robust, existing foundation, drastically minimizing delivery risk. 
+## Proof of Concept and Existing Infrastructure
+This project minimizes delivery risk by building upon a robust, existing foundation.
 
 * **Deployed Citizen Science Apps:** The `mmints` framework is actively deployed in production. We currently maintain multiple open-source REPLEXT Shiny applications (e.g., `npbreplext`, `mmirreplext`, `regls`), demonstrating that the community architecture for saving and aggregating simulation parameters is functional.
-* **The `shinypup` AI Prototype:** In September 2024, we successfully developed a proof-of-concept AI agent called [`shinypup`](https://github.com/smallielabs/shinypup). Acting as an "AI live blogger," it interacted directly with our `npbreplext` Shiny application, successfully observing the simulation state, generating subsequent parameters to explore, and reporting findings ([Live Demo Recording](https://www.youtube.com/watch?v=_KuTATJK7MA)). 
+* **The `shinypup` AI Proof-of-Concept:** In September 2024, we developed an exploratory AI bot called [`shinypup`](https://github.com/smallielabs/shinypup). Its specific goal was to act as an "AI live blogger" that observed and reported on a statistical simulation using external browser automation (JavaScript and Puppeteer) ([Live Demo Recording](https://www.youtube.com/watch?v=_KuTATJK7MA)). While its scope was limited, it successfully proved the foundational concept: LLMs can effectively interpret and interact with Shiny-based statistical applications.
 
-Crucially, `shinypup` was a JavaScript project utilizing Puppeteer to automate the Shiny app browser externally. While it proved the fundamental concept of an AI navigating a statistical parameter space, browser automation is inherently fragile. This grant will fund the translation of this external workflow into native R, integrating the logic directly into the actual R code of the `mmints` package as highly stable Shiny modules.
+**The Evolution to Native Integration**
+This grant does not fund a direct port of the `shinypup` workflow. Instead, we are pivoting to a fundamentally different goal and architecture. The objective of the `mmints` update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via replication and extension (REPLEXT) simulations. 
 
-### Minimum Viable Product
-The MVP will be a CRAN-ready update to the `mmints` package containing the two fully functional Shiny modules. App builders will be able to plug these modules into their existing simulation apps with minimal friction. The MVP will successfully demonstrate a user inputting an LLM API key, the LLM reading the database state, the AI executing native R code to run new parameters, and the generation of a synthesized Markdown report.
+To achieve this, we will abandon external browser manipulation entirely. We will build stable, native R modules that establish direct communication between the AI and the Shiny application's underlying ui and server architecture. This shifts the AI from an external observer "clicking" a browser to an integrated, internal collaborator.
 
-### Architecture
-The architecture centers on creating highly modular, extensible Shiny UI/Server components within `mmints`:
-* **LLM API Interfacing:** We will build secure, native R API wrappers to connect the Shiny environment to major LLM providers.
-* **Context Injection Pipeline:** App builders must be able to hardcode foundational research papers into the system prompt. End-users must also have a UI mechanism to upload their own supplementary papers for the AI to consider.
-* **Database Optimization:** We will refine data-handling logic to ensure the AI can rapidly query and summarize the aggregated citizen science results.
-* **Safety & Tracking:** Implementation of prompt sanitization and a mechanism to track/credit users for their donated LLM queries and data contributions.
+## Minimum Viable Product
+The MVP will be a CRAN-ready update to the `mmints` package containing two fully functional Shiny modules:
+1.  **Intelligent Parameter Exploration (LLM Credit Donation):** A module allowing users to input an LLM API key to drive automated exploration.
+2.  **AI Reporting & Code Generation:** A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.
 
-### Assumptions
-* Researchers and citizen scientists are willing to provide their own LLM API keys or donate credits to drive the exploration process.
+App builders will be able to plug these modules into their existing simulation apps with minimal friction.
+
+## Architecture
+The architecture centers on creating highly modular, extensible Shiny UI/Server components:
+* **LLM API Interfacing:** Secure, native R API wrappers to connect the Shiny environment to major LLM providers.
+* **Context Injection Pipeline:** Mechanisms for app builders to hardcode foundational research papers into the system prompt, and for end-users to upload supplementary PDFs.
+* **Database Optimization:** Refined data-handling logic ensuring the AI can rapidly query and summarize aggregated citizen science results.
+* **Safety & Tracking:** Implementation of prompt sanitization and tracking for user-donated LLM queries and data contributions.
+
+## Assumptions
+* Researchers are willing to provide their own LLM API keys or donate credits to drive the exploration process.
 * Modern LLMs are capable of consistently outputting syntactically correct R code for server-side REPLEXT functions based on package documentation.
 * LLM context windows are sufficient to ingest aggregated database summaries alongside multiple academic papers.
 
-### External Dependencies
-* Existing `mmints` dependencies for UI and authentication: `shiny`, `DT`, `shinyauthr`, and `sodium`.
-* PostgreSQL-specific database management packages (maintaining `mmints`'s open-source database focus): `RPostgres` and `pool` (which is critical for efficiently managing concurrent database connections).
-* R packages for API interaction to build the native LLM wrappers: e.g., `httr2`, `jsonlite`.
-* LLM API Providers (e.g., OpenAI, Anthropic) accessed via user-provided API keys.
+## External Dependencies
+* Existing `mmints` UI/Auth dependencies: `shiny`, `DT`, `shinyauthr`, `sodium`.
+* Database management packages: `RPostgres`, `pool`.
+* API interaction packages: `httr2`, `jsonlite`.
+* External LLM APIs (e.g., OpenAI, Anthropic) accessed via user-provided keys.

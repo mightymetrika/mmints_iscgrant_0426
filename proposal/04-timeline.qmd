@@ -1,40 +1,39 @@
 # Project Plan
 
 ## Start-up Phase
-Because the foundational `mmints` package and the `shinypup` proof-of-concept are already complete, the start-up phase will be highly streamlined. 
-* **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub organization using GitHub Projects and Issue tracking to ensure transparent milestones.
-* **Licensing:** The new modules will be released under the same open-source license as the current `mmints` package (MIT) to ensure full accessibility for the R community.
-* **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations are meeting performance benchmarks before public beta testing.
+Because the foundational `mmints` package and the `shinypup` proof-of-concept are complete, the start-up phase will be highly streamlined. 
+* **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub organization using GitHub Projects and Issue tracking.
+* **Licensing:** The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies.
+* **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.
 
 ## Technical Delivery
 The project will be executed over a six-month timeline, commencing upon grant acceptance (anticipated July 2026):
 
 * **Months 1–2 (July - August 2026): Core API & Context Infrastructure**
-  * Develop secure, native R API wrappers (utilizing `httr2` and `jsonlite`) for LLM interaction.
-  * Build the context injection pipeline, allowing app builders to hardcode foundational papers and users to upload supplementary PDFs.
+    * Develop secure, native R API wrappers (utilizing `httr2` and `jsonlite`) for LLM interaction.
+    * Build the context injection pipeline for foundational papers and user-uploaded PDFs.
 * **Months 3–4 (September - October 2026): Intelligent Parameter Exploration Module**
-  * Develop the Shiny module for user LLM credit donation.
-  * Integrate the AI's parameter generation logic with `pool` and `RPostgres` to ensure it can read the existing database state and execute native R code to run new parameters safely.
+    * Develop the Shiny module for user LLM credit donation.
+    * Integrate the AI's parameter generation logic with robust database handling (`pool` and `RPostgres`). This ensures the AI can efficiently query existing results to find unmapped edge cases, and that newly generated simulation results are safely written back to the database without risking connection overload.
 * **Month 5 (November 2026): AI Reporting Module**
-  * Build the conversational UI for the reporting assistant.
-  * Finalize prompt engineering to ensure the AI synthesizes database queries into a downloadable Markdown report containing executable server-side R code.
+    * Build the conversational UI for the reporting assistant.
+    * Finalize prompt engineering to ensure the AI synthesizes database queries into a downloadable Markdown report containing executable server-side R code.
 * **Month 6 (December 2026): Documentation, Testing, & Deployment**
-  * Comprehensive testing of prompt sanitization and database load handling.
-  * Write package vignettes demonstrating how to implement the "cyborg science" modules.
-  * Submit the updated `mmints` package to CRAN.
+    * Comprehensive testing of prompt sanitization and database load handling.
+    * Write package vignettes demonstrating the implementation of the modules.
+    * Submit the updated `mmints` package to CRAN.
 
-## Other Aspects
-Ensuring this work reaches the widest number of people is a primary goal.
-* **Open Source Availability:** All code will be hosted publicly on GitHub, and the final package will be deployed to CRAN.
-* **Publicity & Community Engagement:** Development updates and calls for beta testers will be shared regularly on LinkedIn to engage the citizen science and R communities.
-* **R Consortium Blog:** We will write a comprehensive post for the R Consortium blog detailing the transition from citizen science to "cyborg science" using `mmints`.
+## Publicity & Community Engagement
+* **Open Source:** All code hosted publicly on GitHub; final package deployed to CRAN.
+* **Social Engagement:** Regular development updates and calls for beta testers shared on LinkedIn.
+* **R Consortium Blog:** A comprehensive post detailing the transition from citizen science to "cyborg science" using `mmints`.
 * **Conferences:** We intend to submit a talk to useR! or similar R conferences to demonstrate the deployed modules.
 
 ## Budget & Funding Plan
 The total requested budget for this project is **$15,000 USD**. 
 
-Because the underlying `mmints` package and database architecture are already established, this budget is highly efficient. The funds will be allocated entirely to labor costs for the core development of the new AI integration modules, testing, and CRAN deployment. 
+Because the underlying `mmints` package and database architecture are established, this budget is highly efficient. Funds will be allocated entirely to labor costs for core development, testing, and CRAN deployment. 
 
 In accordance with R Consortium ISC guidelines, the funding will be structured as follows:
-* **Initial Payment (50% - $7,500):** Paid upon signing the contract. This covers the start-up phase, the development of the Core API and Context Infrastructure, and the initial build of the Intelligent Parameter Exploration module.
-* **Final Payment (50% - $7,500):** Paid upon project completion. This covers the finalization of the AI Reporting Module, comprehensive safety testing, documentation, and the successful submission of the updated `mmints` package to CRAN.
+* **Initial Payment (50% - $7,500):** Paid upon signing the contract. Covers the start-up phase, Core API development, Context Infrastructure, and the initial build of the Intelligent Parameter Exploration module.
+* **Final Payment (50% - $7,500):** Paid upon project completion. Covers the finalization of the AI Reporting Module, safety testing, documentation, and successful CRAN submission.
