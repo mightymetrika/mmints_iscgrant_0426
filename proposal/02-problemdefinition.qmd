@@ -7,17 +7,17 @@ bibliography: references.bib
 ## The Simulation Context Mismatch
 In statistical methods research, a common anti-pattern persists: applied researchers frequently cite simulation results from original methods papers to justify a statistical choice, even when the original simulation parameters do not match their new study's specific context. 
 
-The scientifically rigorous response is to utilize a REPLEXT (replication and extension) function—a tool designed explicitly to re-test published simulation results under study-specific parameters. Unfortunately, this is rarely done in practice.
+To help solve this problem, mightymetrika creates REPLEXT (replication and extension) functions—tools designed to re-test published simulation results under original and new parameters.
 
 ## The Limits of Human-Driven Citizen Science
 Currently, a vast amount of statistical knowledge lives exclusively in the heads of individual methodologists who run informal, unpublished simulations to satisfy their own curiosity about edge cases. Without a centralized community space, the broader R ecosystem misses out on this collective intelligence. 
 
-We have laid the groundwork to solve this by porting methods into web-based Shiny citizen science apps. Live [mightymetrika citizen science applications](https://www.mightymetrika.com/citsci) (e.g., [npbreplext032](https://mightymetrika.shinyapps.io/npbreplext032/)) are currently deployed, allowing users to test smaller iterations of a method and save the results to an open-access database. However, relying solely on human engagement limits the scale of this exploration. 
+We have laid the groundwork to solve this by porting methods into web-based Shiny citizen science apps. Live [mightymetrika citizen science applications](https://www.mightymetrika.com/citsci) (e.g., [npbreplext032](https://mightymetrika.shinyapps.io/npbreplext032/)) are currently deployed, allowing users to test smaller iterations of a method and save the results to an open-access database.
 
 ## The Bottleneck: Evolving to Cyborg Science
 While creating an open database of citizen-science simulations is a massive leap forward, two bottlenecks remain: efficiently exploring a vast parameter space, and synthesizing crowd-sourced data into formal, research-grade extensions. 
 
-This grant aims to build infrastructure that seamlessly augments human researchers. We propose bridging the gap between web-based citizen science and formal scientific publication by evolving `mmints` into a human-AI collaborative environment through two focused modules:
+This grant aims to build infrastructure that augments researchers. We propose evolving `mmints` into a human-AI collaborative environment through two focused modules:
 
-1.  **Intelligent Parameter Exploration:** Relying solely on human curiosity leaves blind spots in the parameter space. We propose a module where users can donate API credits, allowing an AI to ingest the original methods paper, evaluate the current database, and follow user prompts to intelligently select and run new simulation parameters. Functioning similarly to an AI-driven Markov process, it will perform a correlated search to discover the most scientifically interesting edge cases.
-2.  **AI Reporting Module:** Synthesizing the database into a research-grade extension remains a challenge. We will build a chat module where the AI analyzes the open database to draft a comprehensive report based on user queries. Crucially, the AI will output the exact R functions needed to run the optimal full-scale simulation, keeping the human firmly in the loop to execute the final research-grade simulation on their own server.
+1.  **Intelligent Parameter Exploration:** In this module users can donate API credits, allowing an AI to ingest the original methods paper, evaluate the current database, and follow user prompts to intelligently select and run new simulation parameters.
+2.  **AI Reporting Module:** Synthesizing the database into a research-grade extension remains a challenge. We will build a chat module where the AI analyzes the open database to draft a comprehensive report based on user queries. Crucially, the AI will output the exact R functions needed for the researcher to run the optimal full-scale simulation on their own server.

@@ -5,21 +5,21 @@ Because the foundational `mmints` package is complete, the start-up phase will b
 
 * **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub.
 * **Licensing:** MIT license or the most permissive open-source license allowable by newly introduced project dependencies.
-* **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.
+* **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure performance benchmarks before public beta testing.
 
 ## Technical Delivery
-The project will be executed over a six-month timeline, commencing upon grant acceptance (anticipated July 2026):
+The project will be executed over a six-month timeline:
 
-* **Months 1–2 (July - August 2026): Core API & Context Infrastructure**
-    * Develop secure, native R API wrappers (utilizing `httr2` and `jsonlite`) for LLM interaction.
+* **Months 1–2: Core API & Context Infrastructure**
+    * Develop secure, native R API wrappers for LLM interaction.
     * Build the context injection pipeline for foundational papers and user-uploaded PDFs.
-* **Months 3–4 (September - October 2026): Intelligent Parameter Exploration Module**
+* **Months 3–4: Intelligent Parameter Exploration Module**
     * Develop the Shiny module for user LLM credit donation.
-    * Integrate the AI's parameter generation logic with robust database handling (`pool` and `RPostgres`). This ensures the AI can efficiently query existing results to find unmapped edge cases, and that newly generated simulation results are safely written back to the database without risking connection overload.
-* **Month 5 (November 2026): AI Reporting Module**
+    * Integrate the AI's parameter generation logic with robust database handling (`pool` and `RPostgres`).
+* **Month 5: AI Reporting Module**
     * Build the conversational UI for the reporting assistant.
     * Finalize prompt engineering to ensure the AI synthesizes database queries into a downloadable Markdown report containing executable server-side R code.
-* **Month 6 (December 2026): Documentation, Testing, & Deployment**
+* **Month 6: Documentation, Testing, & Deployment**
     * Comprehensive testing of prompt sanitization and database load handling.
     * Write package vignettes demonstrating the implementation of the modules.
     * Submit the updated `mmints` package to CRAN.

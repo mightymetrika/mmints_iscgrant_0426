@@ -2,17 +2,17 @@
 
 **The Problem**
 
-Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive. Porting these methods into web-based Shiny applications democratizes exploration and incorporating Large Language Models (LLMs) may make searching the parameter space more efficient.
+Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive.
 
 **The Solution**
 
-We propose evolving the `mmints` R package from a citizen science platform into a "cyborg science" collaborative environment. By integrating LLMs directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.
+We propose evolving the `mmints` R package from a citizen science platform into a "cyborg science" collaborative environment. By integrating Large Language Models (LLMs) directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.
 
 **Deliverables & Methods**
 
 This project will deliver a CRAN-ready update to the `mmints` package featuring two primary Shiny modules:
 
-* **Intelligent Parameter Exploration (LLM Credit Donation):** A module allowing users to donate API credits so an LLM can ingest research context, analyze the open database, and intelligently search the parameter space to discover and save interesting edge cases.
+* **Intelligent Parameter Exploration (LLM Credit Donation):** A module allowing users to donate API credits so an LLM can ingest research context, analyze the open database, and intelligently search the parameter space to discover and save interesting cases.
 * **AI Reporting & Code Generation:** A conversational assistant that analyzes the aggregated database to draft comprehensive reports and output the exact, executable R code needed to run a full-scale (10,000+ iteration) simulation on a server.
 
 **Expected Outcomes**

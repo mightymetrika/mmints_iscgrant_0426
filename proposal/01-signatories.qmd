@@ -4,6 +4,6 @@
 
 **Mackson Ncube** (Principal Investigator)
 
-As a professional statistician and data scientist, Mackson is the founder of mightymetrika, a think tank dedicated to developing statistical tools for small sample size research. The mightymetrika also specializes in developing citizen science applications to crowd source the investigation of statistical methods.  He is the developer of the `mmints` R package.
+As a professional statistician and data scientist, Mackson is the founder of mightymetrika, a think tank dedicated to developing statistical tools for small sample size research. The mightymetrika also specializes in developing citizen science applications to crowd source the investigation of statistical methods.
 
 * Profiles: [ResearchGate](https://www.researchgate.net/profile/Mackson-Ncube) | [UpWork](https://www.upwork.com/freelancers/~01c5a59d1725d12a0a?viewMode=1)

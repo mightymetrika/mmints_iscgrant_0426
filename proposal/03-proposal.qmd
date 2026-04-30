@@ -1,13 +1,13 @@
 # The Proposal
 
 ## Overview
-We propose updating the `mmints` R package to provide specialized Shiny modules that transform web-based statistical citizen science applications into "cyborg science" environments. By integrating Large Language Models (LLMs) directly into the simulation pipeline, we will bridge the gap between lightweight parameter exploration and research-grade REPLEXT execution.
+We propose updating the `mmints` R package to provide specialized Shiny modules that transform web-based statistical citizen science applications into "cyborg science" environments. By integrating LLMs directly into the simulation pipeline, we will bridge the gap between lightweight parameter exploration and research-grade REPLEXT execution.
 
 ## Proof of Concept and Existing Infrastructure
 This project minimizes delivery risk by building upon a robust, existing foundation.
 
 * **Deployed Citizen Science Apps:** The `mmints` framework is actively deployed in production. We currently maintain multiple open-source REPLEXT Shiny applications (e.g., `npbreplext`, `mmirreplext`, `regls`), demonstrating that the community architecture for saving and aggregating simulation parameters is functional.
-* **The `shinypup` AI Proof-of-Concept:** In September 2024, we developed an exploratory AI bot called [`shinypup`](https://github.com/smallielabs/shinypup). Its specific goal was to act as an "AI live blogger" that observed and reported on a statistical simulation using external browser automation (Puppeteer navigating a Shiny app) ([Live Demo Recording](https://www.youtube.com/watch?v=_KuTATJK7MA)).
+* **The `shinypup` AI Proof-of-Concept:** In September 2024, we developed an exploratory AI bot called [`shinypup`](https://github.com/smallielabs/shinypup). Its specific goal was to act as an "AI live blogger" that observed and reported on a series of statistical simulations using external browser automation (Puppeteer navigating a Shiny app) ([Live Demo Recording](https://www.youtube.com/watch?v=_KuTATJK7MA)).
 
 **The Evolution to Native Integration**
 
@@ -23,7 +23,7 @@ The MVP will be a CRAN-ready update to the `mmints` package containing two fully
 The architecture centers on creating modular, extensible Shiny UI/Server components:
 
 * **LLM API Interfacing:** Secure, native R API wrappers to connect the Shiny environment to major LLM providers.
-* **Context Injection Pipeline:** Mechanisms for app builders to hardcode foundational research papers into the system prompt, and for end-users to upload supplementary PDFs.
+* **Context Injection Pipeline:** Mechanisms for app builders to incorporate foundational research papers into the system prompt, and for end-users to upload supplementary PDFs.
 * **Database Optimization:** Refined data-handling logic ensuring the AI can rapidly query and summarize aggregated citizen science results.
 * **Safety & Tracking:** Implementation of prompt sanitization and tracking for user-donated LLM queries and data contributions.
 
