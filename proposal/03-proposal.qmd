@@ -11,15 +11,13 @@ This project minimizes delivery risk by building upon a robust, existing foundat
 
 **The Evolution to Native Integration**
 
-The objective of the `mmints` update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via replication and extension (REPLEXT) simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application's underlying ui and server architecture. This shifts the AI from an external observer "clicking" a browser to an integrated, internal collaborator.
+The objective of the `mmints` update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via REPLEXT simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application's underlying ui and server architecture. This shifts the AI from an external observer "clicking" a browser to an integrated, internal collaborator.
 
 ## Minimum Viable Product
 The MVP will be a CRAN-ready update to the `mmints` package containing two fully functional Shiny modules:
 
 1.  **Intelligent Parameter Exploration (LLM Credit Donation):** A module allowing users to input an LLM API key to drive automated exploration.
 2.  **AI Reporting & Code Generation:** A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.
-
-App builders will be able to plug these modules into their existing simulation apps with minimal friction.
 
 ## Architecture
 The architecture centers on creating modular, extensible Shiny UI/Server components:
@@ -32,7 +30,6 @@ The architecture centers on creating modular, extensible Shiny UI/Server compone
 ## Assumptions
 * Researchers are willing to provide their own LLM API keys or donate credits to drive the exploration process.
 * Modern LLMs are capable of consistently outputting syntactically correct R code for server-side REPLEXT functions based on package documentation.
-* LLM context windows are sufficient to ingest aggregated database summaries alongside multiple academic papers.
 
 ## External Dependencies
 * Existing `mmints` UI/Auth dependencies: `shiny`, `DT`, `shinyauthr`, `sodium`.

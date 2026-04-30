@@ -2,11 +2,11 @@
 
 **The Problem**
 
-Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive due to time constraints, unreproducible code, or limited technical bandwidth. Porting these methods into web-based Shiny applications democratizes exploration, but current "citizen science" platforms rely entirely on human curiosity. This may leave blind spots in the parameter space and create a disconnect between lightweight web exploration and formal, research-grade publication.
+Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive. Porting these methods into web-based Shiny applications democratizes exploration and incorporating Large Language Models (LLMs) may make searching the parameter space more efficient.
 
 **The Solution**
 
-We propose evolving the `mmints` R package from a citizen science platform into a "cyborg science" collaborative environment. By integrating Large Language Models (LLMs) directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.
+We propose evolving the `mmints` R package from a citizen science platform into a "cyborg science" collaborative environment. By integrating LLMs directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.
 
 **Deliverables & Methods**
 
@@ -17,8 +17,8 @@ This project will deliver a CRAN-ready update to the `mmints` package featuring 
 
 **Expected Outcomes**
 
-We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI. This will transform passive simulation databases into active engines for discovery, directly facilitating the generation of robust scientific papers from web-based inputs.
+We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI.
 
 **Timeline & Budget**
 
-The project will be completed over a six-month timeline. The requested budget is **$15,000 USD**. Because the foundational database and package infrastructure are already deployed, this budget is highly optimized, strictly covering the labor required to build, test, and deploy the native R API wrappers, context injection pipelines, and Shiny modules.
+The project will be completed over a six-month timeline. The requested budget is **$15,000 USD**.

@@ -7,7 +7,7 @@ bibliography: references.bib
 ## The Simulation Context Mismatch
 In statistical methods research, a common anti-pattern persists: applied researchers frequently cite simulation results from original methods papers to justify a statistical choice, even when the original simulation parameters do not match their new study's specific context. 
 
-The scientifically rigorous response is to utilize a REPLEXT (replication and extension) function—a tool designed explicitly to re-test published simulation results under study-specific parameters. Unfortunately, this is rarely done in practice. Time constraints, unreproducible code, and a lack of technical bandwidth within applied research teams prevent these vital extensions from occurring. 
+The scientifically rigorous response is to utilize a REPLEXT (replication and extension) function—a tool designed explicitly to re-test published simulation results under study-specific parameters. Unfortunately, this is rarely done in practice.
 
 ## The Limits of Human-Driven Citizen Science
 Currently, a vast amount of statistical knowledge lives exclusively in the heads of individual methodologists who run informal, unpublished simulations to satisfy their own curiosity about edge cases. Without a centralized community space, the broader R ecosystem misses out on this collective intelligence. 

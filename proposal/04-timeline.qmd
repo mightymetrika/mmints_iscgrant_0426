@@ -4,7 +4,7 @@
 Because the foundational `mmints` package is complete, the start-up phase will be highly streamlined. 
 
 * **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub.
-* **Licensing:** The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies.
+* **Licensing:** MIT license or the most permissive open-source license allowable by newly introduced project dependencies.
 * **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.
 
 ## Technical Delivery
@@ -31,8 +31,6 @@ The project will be executed over a six-month timeline, commencing upon grant ac
 
 ## Budget & Funding Plan
 The total requested budget for this project is **$15,000 USD**. 
-
-Because the underlying `mmints` package and database architecture are established, this budget is highly efficient. Funds will be allocated entirely to labor costs for core development, testing, and CRAN deployment. 
 
 In accordance with R Consortium ISC guidelines, the funding will be structured as follows:
 
