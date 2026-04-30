@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mackson Ncube">
-<meta name="dcterms.date" content="2026-04-23">
+<meta name="dcterms.date" content="2026-04-30">
 
 <title>Evolving mmints from Citizen Science to Cyborg Science</title>
 <style>
@@ -2199,7 +2199,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026-04-23</p>
+      <p class="date">2026-04-30</p>
     </div>
   </div>
   
@@ -2214,47 +2214,30 @@ vertical-align: -.125em;
 <p><em>This template was last revised on 2026-03-24.</em></p>
 <section id="executive-summary" class="level1">
 <h1>Executive Summary</h1>
-<p><strong>The Problem</strong> Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to run a REPLEXT (replication and extension) function to re-test the simulation under new parameters, this is often prohibitive due to time constraints, unreproducible code, or limited technical bandwidth. Porting these methods into web-based Shiny applications democratizes exploration, but current “citizen science” platforms rely entirely on human curiosity. This leaves significant blind spots in the parameter space and creates a disconnect between lightweight web exploration and formal, research-grade publication.</p>
-<p><strong>The Solution</strong> We propose evolving the <code>mmints</code> R package from a citizen science platform into a “cyborg science” collaborative environment. By integrating Large Language Models (LLMs) directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution. This project minimizes delivery risk by building upon an already functional ecosystem: <code>mmints</code> currently powers multiple deployed open-science applications, and the core concept of AI-driven parameter exploration was successfully proven via our 2024 <code>shinypup</code> simulation live-blogger.</p>
-<p><strong>Deliverables &amp; Methods</strong> This project will deliver a CRAN-ready update to the <code>mmints</code> package featuring two primary Shiny modules: * <strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to donate API credits so an LLM can ingest research context, analyze the open database, and intelligently search the parameter space to discover and save interesting edge cases. * <strong>AI Reporting &amp; Code Generation:</strong> A conversational assistant that analyzes the aggregated database to draft comprehensive reports and output the exact, executable R code needed to run a full-scale (10,000+ iteration) REPLEXT on a server.</p>
-<p><strong>Expected Outcomes</strong> We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI. This will transform passive simulation databases into active engines for discovery, directly facilitating the generation of robust scientific papers from web-based inputs.</p>
-<p><strong>Timeline &amp; Budget</strong> The project will be completed over a six-month timeline. The requested budget is <strong>$15,000 USD</strong>. Because the foundational database and package infrastructure are already deployed, this budget is highly optimized, strictly covering the labor required to build, test, and deploy the native R API wrappers, context injection pipelines, and Shiny modules.</p>
+<p><strong>The Problem</strong></p>
+<p>Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive due to time constraints, unreproducible code, or limited technical bandwidth. Porting these methods into web-based Shiny applications democratizes exploration, but current “citizen science” platforms rely entirely on human curiosity. This may leave blind spots in the parameter space and create a disconnect between lightweight web exploration and formal, research-grade publication.</p>
+<p><strong>The Solution</strong></p>
+<p>We propose evolving the <code>mmints</code> R package from a citizen science platform into a “cyborg science” collaborative environment. By integrating Large Language Models (LLMs) directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.</p>
+<p><strong>Deliverables &amp; Methods</strong></p>
+<p>This project will deliver a CRAN-ready update to the <code>mmints</code> package featuring two primary Shiny modules:</p>
+<ul>
+<li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to donate API credits so an LLM can ingest research context, analyze the open database, and intelligently search the parameter space to discover and save interesting edge cases.</li>
+<li><strong>AI Reporting &amp; Code Generation:</strong> A conversational assistant that analyzes the aggregated database to draft comprehensive reports and output the exact, executable R code needed to run a full-scale (10,000+ iteration) simulation on a server.</li>
+</ul>
+<p><strong>Expected Outcomes</strong></p>
+<p>We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI. This will transform passive simulation databases into active engines for discovery, directly facilitating the generation of robust scientific papers from web-based inputs.</p>
+<p><strong>Timeline &amp; Budget</strong></p>
+<p>The project will be completed over a six-month timeline. The requested budget is <strong>$15,000 USD</strong>. Because the foundational database and package infrastructure are already deployed, this budget is highly optimized, strictly covering the labor required to build, test, and deploy the native R API wrappers, context injection pipelines, and Shiny modules.</p>
 </section>
 <section id="signatories" class="level1">
 <h1>Signatories</h1>
-<!--
-This section provides the ISC with a view of the support received from
-the community for a proposal. Acceptance isn't predicated on
-popularity but community acceptance is important. Willingness to
-accept outside input is also a good marker for project delivery.
-
-An optional section would be for R-Core signatories where changes to R
-are proposed.
--->
 <section id="project-team" class="level2">
 <h2 class="anchored" data-anchor-id="project-team">Project team</h2>
-<!--
-Who are the people responsible for actually delivering the project if
-the proposal gets accepted and are already signed up and rearing to
-go? Briefly describe all participants and the skills they will bring
-to the project.
--->
-<p><strong>Mackson Ncube</strong> (Principal Investigator) As a professional statistician and data scientist, Mackson is the founder of mightymetrika, a think tank dedicated to developing statistical tools for small sample size research. The mightymetrika also specializes in developing citizen science applications to crowd source the investigation of statistical methods. He is the original developer of the <code>mmints</code> R package and has a consistent track record of building open-source R tools (such as <code>npboottprm</code>, <code>scdtb</code>, <code>mmcards</code>, and <code>OLStrajr</code>) to advance statistical methodology. He views open-source development as a primary vehicle for building community, sharing expertise, and advancing scientific capability. * Profiles: <a href="https://www.researchgate.net/profile/Mackson-Ncube">ResearchGate</a> | <a href="https://www.upwork.com/freelancers/~01c5a59d1725d12a0a?viewMode=1">UpWork</a></p>
-</section>
-<section id="contributors" class="level2">
-<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
-<!--
-Who are the people who have actively helped with this proposal but
-won't necessarily be on the core project team later?
--->
-</section>
-<section id="consulted" class="level2">
-<h2 class="anchored" data-anchor-id="consulted">Consulted</h2>
-<!--
-Who has been given the opportunity to provide feedback on the
-proposal? This should include any R Consortium & ISC members who the
-proposal has been discussed with.
--->
+<p><strong>Mackson Ncube</strong> (Principal Investigator)</p>
+<p>As a professional statistician and data scientist, Mackson is the founder of mightymetrika, a think tank dedicated to developing statistical tools for small sample size research. The mightymetrika also specializes in developing citizen science applications to crowd source the investigation of statistical methods. He is the developer of the <code>mmints</code> R package.</p>
+<ul>
+<li>Profiles: <a href="https://www.researchgate.net/profile/Mackson-Ncube">ResearchGate</a> | <a href="https://www.upwork.com/freelancers/~01c5a59d1725d12a0a?viewMode=1">UpWork</a></li>
+</ul>
 </section>
 </section>
 <section id="the-problem" class="level1">
@@ -2290,19 +2273,29 @@ proposal has been discussed with.
 <p>This project minimizes delivery risk by building upon a robust, existing foundation.</p>
 <ul>
 <li><strong>Deployed Citizen Science Apps:</strong> The <code>mmints</code> framework is actively deployed in production. We currently maintain multiple open-source REPLEXT Shiny applications (e.g., <code>npbreplext</code>, <code>mmirreplext</code>, <code>regls</code>), demonstrating that the community architecture for saving and aggregating simulation parameters is functional.</li>
-<li><strong>The <code>shinypup</code> AI Proof-of-Concept:</strong> In September 2024, we developed an exploratory AI bot called <a href="https://github.com/smallielabs/shinypup"><code>shinypup</code></a>. Its specific goal was to act as an “AI live blogger” that observed and reported on a statistical simulation using external browser automation (JavaScript and Puppeteer) (<a href="https://www.youtube.com/watch?v=_KuTATJK7MA">Live Demo Recording</a>). While its scope was limited, it successfully proved the foundational concept: LLMs can effectively interpret and interact with Shiny-based statistical applications.</li>
+<li><strong>The <code>shinypup</code> AI Proof-of-Concept:</strong> In September 2024, we developed an exploratory AI bot called <a href="https://github.com/smallielabs/shinypup"><code>shinypup</code></a>. Its specific goal was to act as an “AI live blogger” that observed and reported on a statistical simulation using external browser automation (Puppeteer navigating a Shiny app) (<a href="https://www.youtube.com/watch?v=_KuTATJK7MA">Live Demo Recording</a>).</li>
 </ul>
-<p><strong>The Evolution to Native Integration</strong> This grant does not fund a direct port of the <code>shinypup</code> workflow. Instead, we are pivoting to a fundamentally different goal and architecture. The objective of the <code>mmints</code> update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via replication and extension (REPLEXT) simulations.</p>
-<p>To achieve this, we will abandon external browser manipulation entirely. We will build stable, native R modules that establish direct communication between the AI and the Shiny application’s underlying ui and server architecture. This shifts the AI from an external observer “clicking” a browser to an integrated, internal collaborator.</p>
+<p><strong>The Evolution to Native Integration</strong></p>
+<p>The objective of the <code>mmints</code> update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via replication and extension (REPLEXT) simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application’s underlying ui and server architecture. This shifts the AI from an external observer “clicking” a browser to an integrated, internal collaborator.</p>
 </section>
 <section id="minimum-viable-product" class="level2">
 <h2 class="anchored" data-anchor-id="minimum-viable-product">Minimum Viable Product</h2>
-<p>The MVP will be a CRAN-ready update to the <code>mmints</code> package containing two fully functional Shiny modules: 1. <strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to input an LLM API key to drive automated exploration. 2. <strong>AI Reporting &amp; Code Generation:</strong> A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.</p>
+<p>The MVP will be a CRAN-ready update to the <code>mmints</code> package containing two fully functional Shiny modules:</p>
+<ol type="1">
+<li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to input an LLM API key to drive automated exploration.</li>
+<li><strong>AI Reporting &amp; Code Generation:</strong> A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.</li>
+</ol>
 <p>App builders will be able to plug these modules into their existing simulation apps with minimal friction.</p>
 </section>
 <section id="architecture" class="level2">
 <h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
-<p>The architecture centers on creating highly modular, extensible Shiny UI/Server components: * <strong>LLM API Interfacing:</strong> Secure, native R API wrappers to connect the Shiny environment to major LLM providers. * <strong>Context Injection Pipeline:</strong> Mechanisms for app builders to hardcode foundational research papers into the system prompt, and for end-users to upload supplementary PDFs. * <strong>Database Optimization:</strong> Refined data-handling logic ensuring the AI can rapidly query and summarize aggregated citizen science results. * <strong>Safety &amp; Tracking:</strong> Implementation of prompt sanitization and tracking for user-donated LLM queries and data contributions.</p>
+<p>The architecture centers on creating modular, extensible Shiny UI/Server components:</p>
+<ul>
+<li><strong>LLM API Interfacing:</strong> Secure, native R API wrappers to connect the Shiny environment to major LLM providers.</li>
+<li><strong>Context Injection Pipeline:</strong> Mechanisms for app builders to hardcode foundational research papers into the system prompt, and for end-users to upload supplementary PDFs.</li>
+<li><strong>Database Optimization:</strong> Refined data-handling logic ensuring the AI can rapidly query and summarize aggregated citizen science results.</li>
+<li><strong>Safety &amp; Tracking:</strong> Implementation of prompt sanitization and tracking for user-donated LLM queries and data contributions.</li>
+</ul>
 </section>
 <section id="assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
@@ -2326,7 +2319,12 @@ proposal has been discussed with.
 <h1>Project Plan</h1>
 <section id="start-up-phase" class="level2">
 <h2 class="anchored" data-anchor-id="start-up-phase">Start-up Phase</h2>
-<p>Because the foundational <code>mmints</code> package and the <code>shinypup</code> proof-of-concept are complete, the start-up phase will be highly streamlined. * <strong>Collaboration &amp; Tracking:</strong> All development will be tracked publicly via the Mightymetrika GitHub organization using GitHub Projects and Issue tracking. * <strong>Licensing:</strong> The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies. * <strong>Reporting Framework:</strong> We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.</p>
+<p>Because the foundational <code>mmints</code> package is complete, the start-up phase will be highly streamlined.</p>
+<ul>
+<li><strong>Collaboration &amp; Tracking:</strong> All development will be tracked publicly via the Mightymetrika GitHub.</li>
+<li><strong>Licensing:</strong> The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies.</li>
+<li><strong>Reporting Framework:</strong> We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.</li>
+</ul>
 </section>
 <section id="technical-delivery" class="level2">
 <h2 class="anchored" data-anchor-id="technical-delivery">Technical Delivery</h2>
@@ -2359,8 +2357,7 @@ proposal has been discussed with.
 <h2 class="anchored" data-anchor-id="publicity-community-engagement">Publicity &amp; Community Engagement</h2>
 <ul>
 <li><strong>Open Source:</strong> All code hosted publicly on GitHub; final package deployed to CRAN.</li>
-<li><strong>Social Engagement:</strong> Regular development updates and calls for beta testers shared on LinkedIn.</li>
-<li><strong>R Consortium Blog:</strong> A comprehensive post detailing the transition from citizen science to “cyborg science” using <code>mmints</code>.</li>
+<li><strong>Blog:</strong> A comprehensive post detailing the transition from citizen science to “cyborg science” using <code>mmints</code>.</li>
 <li><strong>Conferences:</strong> We intend to submit a talk to useR! or similar R conferences to demonstrate the deployed modules.</li>
 </ul>
 </section>
@@ -2368,18 +2365,41 @@ proposal has been discussed with.
 <h2 class="anchored" data-anchor-id="budget-funding-plan">Budget &amp; Funding Plan</h2>
 <p>The total requested budget for this project is <strong>$15,000 USD</strong>.</p>
 <p>Because the underlying <code>mmints</code> package and database architecture are established, this budget is highly efficient. Funds will be allocated entirely to labor costs for core development, testing, and CRAN deployment.</p>
-<p>In accordance with R Consortium ISC guidelines, the funding will be structured as follows: * <strong>Initial Payment (50% - $7,500):</strong> Paid upon signing the contract. Covers the start-up phase, Core API development, Context Infrastructure, and the initial build of the Intelligent Parameter Exploration module. * <strong>Final Payment (50% - $7,500):</strong> Paid upon project completion. Covers the finalization of the AI Reporting Module, safety testing, documentation, and successful CRAN submission.</p>
+<p>In accordance with R Consortium ISC guidelines, the funding will be structured as follows:</p>
+<ul>
+<li><strong>Initial Payment (50% - $7,500):</strong> Paid upon signing the contract. Covers the start-up phase, core API development, context infrastructure, and the initial build of the intelligent parameter exploration module.</li>
+<li><strong>Final Payment (50% - $7,500):</strong> Paid upon project completion. Covers the finalization of the AI reporting module, safety testing, documentation, and successful CRAN submission.</li>
+</ul>
 </section>
 </section>
 <section id="success" class="level1">
 <h1>Success</h1>
 <section id="definition-of-done" class="level2">
 <h2 class="anchored" data-anchor-id="definition-of-done">Definition of Done</h2>
-<p>The project will be considered successfully completed when: 1. <strong>Module Integration:</strong> Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the <code>mmints</code> R package as robust, native Shiny modules. 2. <strong>CRAN Acceptance:</strong> The updated <code>mmints</code> package successfully passes all checks and is published on CRAN. 3. <strong>Documentation:</strong> Comprehensive vignettes are published, demonstrating how R developers can integrate these modules into their own Shiny-based statistical simulation apps. 4. <strong>Knowledge Sharing:</strong> A project summary and tutorial are published on the R Consortium blog.</p>
+<p>The project will be considered successfully completed when:</p>
+<ol type="1">
+<li><strong>Module Integration:</strong> Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the <code>mmints</code> R package as robust, native Shiny modules.</li>
+<li><strong>CRAN Acceptance:</strong> The updated <code>mmints</code> package successfully passes all checks and is published on CRAN.</li>
+<li><strong>Documentation:</strong> Comprehensive vignettes are published, demonstrating how R developers can integrate these modules into their own Shiny-based statistical simulation apps.</li>
+<li><strong>Knowledge Sharing:</strong> A project summary and tutorial are published online.</li>
+</ol>
 </section>
 <section id="measuring-success" class="level2">
 <h2 class="anchored" data-anchor-id="measuring-success">Measuring Success</h2>
-<p>We will track the impact of the project through both technical and community-driven markers: * <strong>Technical Markers (During Development):</strong> * Error-free API execution of LLM prompts from within the native R environment. * Successful translation of LLM outputs into syntactically correct R code that executes on the server without breaking the <code>pool</code> database connection. * <strong>Community Markers (Post-Deployment):</strong> * <strong>Adoption:</strong> The number of unique Shiny applications built by the community that implement the new <code>mmints</code> AI modules. * <strong>Exploration Volume:</strong> The number of AI-driven parameter explorations logged in the PostgreSQL databases of deployed <code>mmints</code> apps. * <strong>Engagement:</strong> Standard open-source metrics (GitHub stars, forks, issues, and pull requests).</p>
+<p>We will track the impact of the project through both technical and community-driven markers:</p>
+<ul>
+<li><strong>Technical Markers (During Development):</strong>
+<ul>
+<li>Error-free API execution of LLM prompts from within the native R environment.</li>
+<li>Successful translation of LLM outputs into syntactically correct R code that executes on the server without breaking the <code>pool</code> database connection.</li>
+</ul></li>
+<li><strong>Community Markers (Post-Deployment):</strong>
+<ul>
+<li><strong>Adoption:</strong> The number of unique Shiny applications built by the community that implement the new <code>mmints</code> AI modules.</li>
+<li><strong>Exploration Volume:</strong> The number of AI-driven parameter explorations logged in the databases of deployed <code>mmints</code> apps.</li>
+<li><strong>Engagement:</strong> Standard open-source metrics (GitHub stars, forks, issues, and pull requests).</li>
+</ul></li>
+</ul>
 </section>
 <section id="future-work" class="level2">
 <h2 class="anchored" data-anchor-id="future-work">Future Work</h2>
@@ -2388,7 +2408,6 @@ proposal has been discussed with.
 <li><strong>Containerized Deployment Infrastructure:</strong> Currently, deploying a robust REPLEXT Shiny application requires significant backend overhead. Future work will focus on building standardized deployment templates or Docker configurations within <code>mmints</code> to allow researchers to spin up these complex, AI-integrated environments with minimal friction.</li>
 <li><strong>Agentic Generation of REPLEXT Ecosystems:</strong> Mightymetrika’s <em>Random Playables</em> is a live platform designed to “turn mathematical ponderings into citizen science games.” It successfully utilizes an AI chatbot to dynamically build TypeScript/React applications and connect them to the platform’s database. Leveraging the core principles of this AI-driven generation, future iterations of <code>mmints</code> will strive to develop an AI agent tailored for the R ecosystem. This agent will be capable of ingesting a methodological paper and automatically generating the corresponding REPLEXT functions and a fully structured REPLEXT Shiny application.</li>
 <li><strong>Towards Autonomous AI Methodologists:</strong> By establishing the foundational client-server communication modules in this grant, we create the stepping stones to move from a human-in-the-loop “cyborg scientist” toward fully autonomous AI research agents. Future development could allow these agents to autonomously monitor methodological literature, run necessary parameter extensions, and report optimized statistical guidelines back to the research community.</li>
-<li><strong>Local Model Integration:</strong> Future work could extend the API wrappers to support local, open-weights models (e.g., via Ollama), allowing researchers working with proprietary or highly sensitive data to utilize the AI modules privately without sending context to external providers.</li>
 </ol>
 <div class="refs">
 
