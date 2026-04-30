@@ -2215,9 +2215,9 @@ vertical-align: -.125em;
 <section id="executive-summary" class="level1">
 <h1>Executive Summary</h1>
 <p><strong>The Problem</strong></p>
-<p>Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive due to time constraints, unreproducible code, or limited technical bandwidth. Porting these methods into web-based Shiny applications democratizes exploration, but current “citizen science” platforms rely entirely on human curiosity. This may leave blind spots in the parameter space and create a disconnect between lightweight web exploration and formal, research-grade publication.</p>
+<p>Applied researchers frequently justify their statistical choices by citing simulation results from methodological papers, even when the original simulation parameters do not match their specific study context. While the rigorous solution is to re-test the simulation under new parameters, this is often prohibitive. Porting these methods into web-based Shiny applications democratizes exploration and incorporating Large Language Models (LLMs) may make searching the parameter space more efficient.</p>
 <p><strong>The Solution</strong></p>
-<p>We propose evolving the <code>mmints</code> R package from a citizen science platform into a “cyborg science” collaborative environment. By integrating Large Language Models (LLMs) directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.</p>
+<p>We propose evolving the <code>mmints</code> R package from a citizen science platform into a “cyborg science” collaborative environment. By integrating LLMs directly into the simulation pipeline via native Shiny modules, we will bridge the gap between web-based parameter exploration and full-scale server execution.</p>
 <p><strong>Deliverables &amp; Methods</strong></p>
 <p>This project will deliver a CRAN-ready update to the <code>mmints</code> package featuring two primary Shiny modules:</p>
 <ul>
@@ -2225,9 +2225,9 @@ vertical-align: -.125em;
 <li><strong>AI Reporting &amp; Code Generation:</strong> A conversational assistant that analyzes the aggregated database to draft comprehensive reports and output the exact, executable R code needed to run a full-scale (10,000+ iteration) simulation on a server.</li>
 </ul>
 <p><strong>Expected Outcomes</strong></p>
-<p>We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI. This will transform passive simulation databases into active engines for discovery, directly facilitating the generation of robust scientific papers from web-based inputs.</p>
+<p>We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI.</p>
 <p><strong>Timeline &amp; Budget</strong></p>
-<p>The project will be completed over a six-month timeline. The requested budget is <strong>$15,000 USD</strong>. Because the foundational database and package infrastructure are already deployed, this budget is highly optimized, strictly covering the labor required to build, test, and deploy the native R API wrappers, context injection pipelines, and Shiny modules.</p>
+<p>The project will be completed over a six-month timeline. The requested budget is <strong>$15,000 USD</strong>.</p>
 </section>
 <section id="signatories" class="level1">
 <h1>Signatories</h1>
@@ -2245,7 +2245,7 @@ vertical-align: -.125em;
 <section id="the-simulation-context-mismatch" class="level2">
 <h2 class="anchored" data-anchor-id="the-simulation-context-mismatch">The Simulation Context Mismatch</h2>
 <p>In statistical methods research, a common anti-pattern persists: applied researchers frequently cite simulation results from original methods papers to justify a statistical choice, even when the original simulation parameters do not match their new study’s specific context.</p>
-<p>The scientifically rigorous response is to utilize a REPLEXT (replication and extension) function—a tool designed explicitly to re-test published simulation results under study-specific parameters. Unfortunately, this is rarely done in practice. Time constraints, unreproducible code, and a lack of technical bandwidth within applied research teams prevent these vital extensions from occurring.</p>
+<p>The scientifically rigorous response is to utilize a REPLEXT (replication and extension) function—a tool designed explicitly to re-test published simulation results under study-specific parameters. Unfortunately, this is rarely done in practice.</p>
 </section>
 <section id="the-limits-of-human-driven-citizen-science" class="level2">
 <h2 class="anchored" data-anchor-id="the-limits-of-human-driven-citizen-science">The Limits of Human-Driven Citizen Science</h2>
@@ -2276,7 +2276,7 @@ vertical-align: -.125em;
 <li><strong>The <code>shinypup</code> AI Proof-of-Concept:</strong> In September 2024, we developed an exploratory AI bot called <a href="https://github.com/smallielabs/shinypup"><code>shinypup</code></a>. Its specific goal was to act as an “AI live blogger” that observed and reported on a statistical simulation using external browser automation (Puppeteer navigating a Shiny app) (<a href="https://www.youtube.com/watch?v=_KuTATJK7MA">Live Demo Recording</a>).</li>
 </ul>
 <p><strong>The Evolution to Native Integration</strong></p>
-<p>The objective of the <code>mmints</code> update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via replication and extension (REPLEXT) simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application’s underlying ui and server architecture. This shifts the AI from an external observer “clicking” a browser to an integrated, internal collaborator.</p>
+<p>The objective of the <code>mmints</code> update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via REPLEXT simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application’s underlying ui and server architecture. This shifts the AI from an external observer “clicking” a browser to an integrated, internal collaborator.</p>
 </section>
 <section id="minimum-viable-product" class="level2">
 <h2 class="anchored" data-anchor-id="minimum-viable-product">Minimum Viable Product</h2>
@@ -2285,7 +2285,6 @@ vertical-align: -.125em;
 <li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to input an LLM API key to drive automated exploration.</li>
 <li><strong>AI Reporting &amp; Code Generation:</strong> A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.</li>
 </ol>
-<p>App builders will be able to plug these modules into their existing simulation apps with minimal friction.</p>
 </section>
 <section id="architecture" class="level2">
 <h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
@@ -2302,7 +2301,6 @@ vertical-align: -.125em;
 <ul>
 <li>Researchers are willing to provide their own LLM API keys or donate credits to drive the exploration process.</li>
 <li>Modern LLMs are capable of consistently outputting syntactically correct R code for server-side REPLEXT functions based on package documentation.</li>
-<li>LLM context windows are sufficient to ingest aggregated database summaries alongside multiple academic papers.</li>
 </ul>
 </section>
 <section id="external-dependencies" class="level2">
@@ -2322,7 +2320,7 @@ vertical-align: -.125em;
 <p>Because the foundational <code>mmints</code> package is complete, the start-up phase will be highly streamlined.</p>
 <ul>
 <li><strong>Collaboration &amp; Tracking:</strong> All development will be tracked publicly via the Mightymetrika GitHub.</li>
-<li><strong>Licensing:</strong> The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies.</li>
+<li><strong>Licensing:</strong> MIT license or the most permissive open-source license allowable by newly introduced project dependencies.</li>
 <li><strong>Reporting Framework:</strong> We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.</li>
 </ul>
 </section>
@@ -2364,7 +2362,6 @@ vertical-align: -.125em;
 <section id="budget-funding-plan" class="level2">
 <h2 class="anchored" data-anchor-id="budget-funding-plan">Budget &amp; Funding Plan</h2>
 <p>The total requested budget for this project is <strong>$15,000 USD</strong>.</p>
-<p>Because the underlying <code>mmints</code> package and database architecture are established, this budget is highly efficient. Funds will be allocated entirely to labor costs for core development, testing, and CRAN deployment.</p>
 <p>In accordance with R Consortium ISC guidelines, the funding will be structured as follows:</p>
 <ul>
 <li><strong>Initial Payment (50% - $7,500):</strong> Paid upon signing the contract. Covers the start-up phase, core API development, context infrastructure, and the initial build of the intelligent parameter exploration module.</li>
@@ -2396,7 +2393,6 @@ vertical-align: -.125em;
 <li><strong>Community Markers (Post-Deployment):</strong>
 <ul>
 <li><strong>Adoption:</strong> The number of unique Shiny applications built by the community that implement the new <code>mmints</code> AI modules.</li>
-<li><strong>Exploration Volume:</strong> The number of AI-driven parameter explorations logged in the databases of deployed <code>mmints</code> apps.</li>
 <li><strong>Engagement:</strong> Standard open-source metrics (GitHub stars, forks, issues, and pull requests).</li>
 </ul></li>
 </ul>
@@ -2406,8 +2402,7 @@ vertical-align: -.125em;
 <p>Establishing this infrastructure opens several highly practical avenues for future development within the R ecosystem:</p>
 <ol type="1">
 <li><strong>Containerized Deployment Infrastructure:</strong> Currently, deploying a robust REPLEXT Shiny application requires significant backend overhead. Future work will focus on building standardized deployment templates or Docker configurations within <code>mmints</code> to allow researchers to spin up these complex, AI-integrated environments with minimal friction.</li>
-<li><strong>Agentic Generation of REPLEXT Ecosystems:</strong> Mightymetrika’s <em>Random Playables</em> is a live platform designed to “turn mathematical ponderings into citizen science games.” It successfully utilizes an AI chatbot to dynamically build TypeScript/React applications and connect them to the platform’s database. Leveraging the core principles of this AI-driven generation, future iterations of <code>mmints</code> will strive to develop an AI agent tailored for the R ecosystem. This agent will be capable of ingesting a methodological paper and automatically generating the corresponding REPLEXT functions and a fully structured REPLEXT Shiny application.</li>
-<li><strong>Towards Autonomous AI Methodologists:</strong> By establishing the foundational client-server communication modules in this grant, we create the stepping stones to move from a human-in-the-loop “cyborg scientist” toward fully autonomous AI research agents. Future development could allow these agents to autonomously monitor methodological literature, run necessary parameter extensions, and report optimized statistical guidelines back to the research community.</li>
+<li><strong>Agentic Generation of REPLEXT Ecosystems:</strong> Mightymetrika’s <em>Random Playables</em> is a live platform designed to “turn mathematical ponderings into citizen science games.” It successfully utilizes an AI chatbot to dynamically build TypeScript/React applications and connect them to the platform’s database. Leveraging the core principles of this AI-driven project, future iterations of <code>mmints</code> will strive to develop an AI agent tailored for REPLEXT functions and apps.</li>
 </ol>
 <div class="refs">
 
