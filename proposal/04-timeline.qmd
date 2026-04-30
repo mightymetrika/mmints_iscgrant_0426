@@ -1,8 +1,9 @@
 # Project Plan
 
 ## Start-up Phase
-Because the foundational `mmints` package and the `shinypup` proof-of-concept are complete, the start-up phase will be highly streamlined. 
-* **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub organization using GitHub Projects and Issue tracking.
+Because the foundational `mmints` package is complete, the start-up phase will be highly streamlined. 
+
+* **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub.
 * **Licensing:** The new modules will be released under the open-source MIT license, or the most permissive open-source license allowable by newly introduced project dependencies.
 * **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure the API integrations and database optimizations meet performance benchmarks before public beta testing.
 
@@ -25,8 +26,7 @@ The project will be executed over a six-month timeline, commencing upon grant ac
 
 ## Publicity & Community Engagement
 * **Open Source:** All code hosted publicly on GitHub; final package deployed to CRAN.
-* **Social Engagement:** Regular development updates and calls for beta testers shared on LinkedIn.
-* **R Consortium Blog:** A comprehensive post detailing the transition from citizen science to "cyborg science" using `mmints`.
+* **Blog:** A comprehensive post detailing the transition from citizen science to "cyborg science" using `mmints`.
 * **Conferences:** We intend to submit a talk to useR! or similar R conferences to demonstrate the deployed modules.
 
 ## Budget & Funding Plan
@@ -35,5 +35,6 @@ The total requested budget for this project is **$15,000 USD**.
 Because the underlying `mmints` package and database architecture are established, this budget is highly efficient. Funds will be allocated entirely to labor costs for core development, testing, and CRAN deployment. 
 
 In accordance with R Consortium ISC guidelines, the funding will be structured as follows:
-* **Initial Payment (50% - $7,500):** Paid upon signing the contract. Covers the start-up phase, Core API development, Context Infrastructure, and the initial build of the Intelligent Parameter Exploration module.
-* **Final Payment (50% - $7,500):** Paid upon project completion. Covers the finalization of the AI Reporting Module, safety testing, documentation, and successful CRAN submission.
+
+* **Initial Payment (50% - $7,500):** Paid upon signing the contract. Covers the start-up phase, core API development, context infrastructure, and the initial build of the intelligent parameter exploration module.
+* **Final Payment (50% - $7,500):** Paid upon project completion. Covers the finalization of the AI reporting module, safety testing, documentation, and successful CRAN submission.
