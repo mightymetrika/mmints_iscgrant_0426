@@ -16,8 +16,3 @@ We have laid the groundwork to solve this by porting methods into web-based Shin
 
 ## The Bottleneck: Evolving to Cyborg Science
 While creating an open database of citizen-science simulations is a massive leap forward, two bottlenecks remain: efficiently exploring a vast parameter space, and synthesizing crowd-sourced data into formal, research-grade extensions. 
-
-This grant aims to build infrastructure that augments researchers. We propose evolving `mmints` into a human-AI collaborative environment through two focused modules:
-
-1.  **Intelligent Parameter Exploration:** In this module users can donate API credits, allowing an AI to ingest the original methods paper, evaluate the current database, and follow user prompts to intelligently select and run new simulation parameters.
-2.  **AI Reporting Module:** Synthesizing the database into a research-grade extension remains a challenge. We will build a chat module where the AI analyzes the open database to draft a comprehensive report based on user queries. Crucially, the AI will output the exact R functions needed for the researcher to run the optimal full-scale simulation on their own server.

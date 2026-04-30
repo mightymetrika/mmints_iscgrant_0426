@@ -3,9 +3,9 @@
 ## Definition of Done
 The project will be considered successfully completed when:
 
-1.  **Module Integration:** Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the `mmints` R package as robust, native Shiny modules.
+1.  **Module Integration:** Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the `mmints` R package as Shiny modules.
 2.  **CRAN Acceptance:** The updated `mmints` package successfully passes all checks and is published on CRAN.
-3.  **Documentation:** Comprehensive vignettes are published, demonstrating how R developers can integrate these modules into their own Shiny-based statistical simulation apps.
+3.  **Documentation:** Comprehensive vignettes are published, demonstrating how R developers can use these modules.
 4.  **Knowledge Sharing:** A project summary and tutorial are published online.
 
 ## Measuring Success

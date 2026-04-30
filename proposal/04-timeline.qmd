@@ -5,7 +5,7 @@ Because the foundational `mmints` package is complete, the start-up phase will b
 
 * **Collaboration & Tracking:** All development will be tracked publicly via the Mightymetrika GitHub.
 * **Licensing:** MIT license or the most permissive open-source license allowable by newly introduced project dependencies.
-* **Reporting Framework:** We will establish a bi-monthly internal review schedule to ensure performance benchmarks before public beta testing.
+* **Reporting Framework:** We will establish a bi-monthly internal review schedule.
 
 ## Technical Delivery
 The project will be executed over a six-month timeline:
@@ -30,9 +30,7 @@ The project will be executed over a six-month timeline:
 * **Conferences:** We intend to submit a talk to useR! or similar R conferences to demonstrate the deployed modules.
 
 ## Budget & Funding Plan
-The total requested budget for this project is **$15,000 USD**. 
-
-In accordance with R Consortium ISC guidelines, the funding will be structured as follows:
+The total requested budget for this project is **$15,000 USD** and will be structured as follows:
 
 * **Initial Payment (50% - $7,500):** Paid upon signing the contract. Covers the start-up phase, core API development, context infrastructure, and the initial build of the intelligent parameter exploration module.
 * **Final Payment (50% - $7,500):** Paid upon project completion. Covers the finalization of the AI reporting module, safety testing, documentation, and successful CRAN submission.
