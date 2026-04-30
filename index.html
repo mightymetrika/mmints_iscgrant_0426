@@ -2221,11 +2221,9 @@ vertical-align: -.125em;
 <p><strong>Deliverables &amp; Methods</strong></p>
 <p>This project will deliver a CRAN-ready update to the <code>mmints</code> package featuring two primary Shiny modules:</p>
 <ul>
-<li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to donate API credits so an LLM can ingest research context, analyze the open database, and intelligently search the parameter space to discover and save interesting cases.</li>
-<li><strong>AI Reporting &amp; Code Generation:</strong> A conversational assistant that analyzes the aggregated database to draft comprehensive reports and output the exact, executable R code needed to run a full-scale (10,000+ iteration) simulation on a server.</li>
+<li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to donate API credits so an LLM can intelligently search the parameter space..</li>
+<li><strong>AI Reporting &amp; Code Generation:</strong> A conversational assistant that analyzes the aggregated database to draft comprehensive reports with the executable R code needed to run a full-scale simulation on a server.</li>
 </ul>
-<p><strong>Expected Outcomes</strong></p>
-<p>We will provide the R community with standardized, open-source infrastructure to seamlessly augment human researchers with AI.</p>
 <p><strong>Timeline &amp; Budget</strong></p>
 <p>The project will be completed over a six-month timeline. The requested budget is <strong>$15,000 USD</strong>.</p>
 </section>
@@ -2255,11 +2253,6 @@ vertical-align: -.125em;
 <section id="the-bottleneck-evolving-to-cyborg-science" class="level2">
 <h2 class="anchored" data-anchor-id="the-bottleneck-evolving-to-cyborg-science">The Bottleneck: Evolving to Cyborg Science</h2>
 <p>While creating an open database of citizen-science simulations is a massive leap forward, two bottlenecks remain: efficiently exploring a vast parameter space, and synthesizing crowd-sourced data into formal, research-grade extensions.</p>
-<p>This grant aims to build infrastructure that augments researchers. We propose evolving <code>mmints</code> into a human-AI collaborative environment through two focused modules:</p>
-<ol type="1">
-<li><strong>Intelligent Parameter Exploration:</strong> In this module users can donate API credits, allowing an AI to ingest the original methods paper, evaluate the current database, and follow user prompts to intelligently select and run new simulation parameters.</li>
-<li><strong>AI Reporting Module:</strong> Synthesizing the database into a research-grade extension remains a challenge. We will build a chat module where the AI analyzes the open database to draft a comprehensive report based on user queries. Crucially, the AI will output the exact R functions needed for the researcher to run the optimal full-scale simulation on their own server.</li>
-</ol>
 </section>
 </section>
 <section id="the-proposal" class="level1">
@@ -2272,8 +2265,8 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="proof-of-concept-and-existing-infrastructure">Proof of Concept and Existing Infrastructure</h2>
 <p>This project minimizes delivery risk by building upon a robust, existing foundation.</p>
 <ul>
-<li><strong>Deployed Citizen Science Apps:</strong> The <code>mmints</code> framework is actively deployed in production. We currently maintain multiple open-source REPLEXT Shiny applications (e.g., <code>npbreplext</code>, <code>mmirreplext</code>, <code>regls</code>), demonstrating that the community architecture for saving and aggregating simulation parameters is functional.</li>
-<li><strong>The <code>shinypup</code> AI Proof-of-Concept:</strong> In September 2024, we developed an exploratory AI bot called <a href="https://github.com/smallielabs/shinypup"><code>shinypup</code></a>. Its specific goal was to act as an “AI live blogger” that observed and reported on a series of statistical simulations using external browser automation (Puppeteer navigating a Shiny app) (<a href="https://www.youtube.com/watch?v=_KuTATJK7MA">Live Demo Recording</a>).</li>
+<li><strong>Deployed Citizen Science Apps:</strong> The <code>mmints</code> framework is actively deployed in production. We currently maintain multiple open-source REPLEXT Shiny applications (e.g., <code>npbreplext</code>, <code>mmirreplext</code>, <code>regls</code>).</li>
+<li><strong>The <code>shinypup</code> AI Proof-of-Concept:</strong> In September 2024, we developed an exploratory AI bot called <a href="https://github.com/smallielabs/shinypup"><code>shinypup</code></a>. Its goal was to act as an “AI live blogger” that observed and reported on a series of statistical simulations using external browser automation (Puppeteer navigating a Shiny app) (<a href="https://www.youtube.com/watch?v=_KuTATJK7MA">Live Demo Recording</a>).</li>
 </ul>
 <p><strong>The Evolution to Native Integration</strong></p>
 <p>The objective of the <code>mmints</code> update is to help the research community collaborate directly with AI to produce new, research-grade knowledge via REPLEXT simulations. To achieve this, we will build stable, native R modules that establish direct communication between the AI and the Shiny application’s underlying ui and server architecture. This shifts the AI from an external observer “clicking” a browser to an integrated, internal collaborator.</p>
@@ -2282,8 +2275,8 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="minimum-viable-product">Minimum Viable Product</h2>
 <p>The MVP will be a CRAN-ready update to the <code>mmints</code> package containing two fully functional Shiny modules:</p>
 <ol type="1">
-<li><strong>Intelligent Parameter Exploration (LLM Credit Donation):</strong> A module allowing users to input an LLM API key to drive automated exploration.</li>
-<li><strong>AI Reporting &amp; Code Generation:</strong> A conversational module synthesizing database results into a downloadable report containing executable R code for server-side REPLEXTs.</li>
+<li><strong>Intelligent Parameter Exploration:</strong> In this module users can donate API credits, allowing an AI to ingest the original methods paper, evaluate the current database, and follow user prompts to intelligently select and run new simulation parameters.</li>
+<li><strong>AI Reporting Module:</strong> Synthesizing the database into a research-grade extension remains a challenge. We will build a chat module where the AI analyzes the open database to draft a comprehensive report based on user queries. Crucially, the AI will output the exact R functions needed for the researcher to run the optimal full-scale simulation on their own server.</li>
 </ol>
 </section>
 <section id="architecture" class="level2">
@@ -2291,9 +2284,8 @@ vertical-align: -.125em;
 <p>The architecture centers on creating modular, extensible Shiny UI/Server components:</p>
 <ul>
 <li><strong>LLM API Interfacing:</strong> Secure, native R API wrappers to connect the Shiny environment to major LLM providers.</li>
-<li><strong>Context Injection Pipeline:</strong> Mechanisms for app builders to incorporate foundational research papers into the system prompt, and for end-users to upload supplementary PDFs.</li>
-<li><strong>Database Optimization:</strong> Refined data-handling logic ensuring the AI can rapidly query and summarize aggregated citizen science results.</li>
-<li><strong>Safety &amp; Tracking:</strong> Implementation of prompt sanitization and tracking for user-donated LLM queries and data contributions.</li>
+<li><strong>Context Injection Pipeline:</strong> Mechanisms for app builders to incorporate foundational research papers and for end-users to upload supplementary PDFs.</li>
+<li><strong>Database Optimization:</strong> Refined data-handling ensuring the AI can rapidly query and summarize citizen science results.</li>
 </ul>
 </section>
 <section id="assumptions" class="level2">
@@ -2321,7 +2313,7 @@ vertical-align: -.125em;
 <ul>
 <li><strong>Collaboration &amp; Tracking:</strong> All development will be tracked publicly via the Mightymetrika GitHub.</li>
 <li><strong>Licensing:</strong> MIT license or the most permissive open-source license allowable by newly introduced project dependencies.</li>
-<li><strong>Reporting Framework:</strong> We will establish a bi-monthly internal review schedule to ensure performance benchmarks before public beta testing.</li>
+<li><strong>Reporting Framework:</strong> We will establish a bi-monthly internal review schedule.</li>
 </ul>
 </section>
 <section id="technical-delivery" class="level2">
@@ -2361,8 +2353,7 @@ vertical-align: -.125em;
 </section>
 <section id="budget-funding-plan" class="level2">
 <h2 class="anchored" data-anchor-id="budget-funding-plan">Budget &amp; Funding Plan</h2>
-<p>The total requested budget for this project is <strong>$15,000 USD</strong>.</p>
-<p>In accordance with R Consortium ISC guidelines, the funding will be structured as follows:</p>
+<p>The total requested budget for this project is <strong>$15,000 USD</strong> and will be structured as follows:</p>
 <ul>
 <li><strong>Initial Payment (50% - $7,500):</strong> Paid upon signing the contract. Covers the start-up phase, core API development, context infrastructure, and the initial build of the intelligent parameter exploration module.</li>
 <li><strong>Final Payment (50% - $7,500):</strong> Paid upon project completion. Covers the finalization of the AI reporting module, safety testing, documentation, and successful CRAN submission.</li>
@@ -2375,9 +2366,9 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="definition-of-done">Definition of Done</h2>
 <p>The project will be considered successfully completed when:</p>
 <ol type="1">
-<li><strong>Module Integration:</strong> Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the <code>mmints</code> R package as robust, native Shiny modules.</li>
+<li><strong>Module Integration:</strong> Both the Intelligent Parameter Exploration and AI Reporting modules are fully integrated into the <code>mmints</code> R package as Shiny modules.</li>
 <li><strong>CRAN Acceptance:</strong> The updated <code>mmints</code> package successfully passes all checks and is published on CRAN.</li>
-<li><strong>Documentation:</strong> Comprehensive vignettes are published, demonstrating how R developers can integrate these modules into their own Shiny-based statistical simulation apps.</li>
+<li><strong>Documentation:</strong> Comprehensive vignettes are published, demonstrating how R developers can use these modules.</li>
 <li><strong>Knowledge Sharing:</strong> A project summary and tutorial are published online.</li>
 </ol>
 </section>
